@@ -29,6 +29,15 @@ CTinit(int n, double *y[], int maxcat, char **error,
         trsums = wtsums + maxcat;
         wtsqrsums = trsums + maxcat;
         trsqrsums = wtsqrsums + maxcat;
+        _x = trsqrsums + maxcat;
+        _y = _x + maxcat;
+        _z = _y + maxcat;
+        _xy = _z + maxcat;
+        _xz = _xy + maxcat;
+        _yz = _xz + maxcat;
+        _xx = _yz + maxcat;
+        _yy = _xx + maxcat;
+        _zz = _yy + maxcat;
     }
     *size = 1;
     *train_to_est_ratio = n * 1.0 / ct.NumHonest;
